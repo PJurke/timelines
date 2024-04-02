@@ -2,10 +2,12 @@ import TopLevelMenuButton from "./button";
 
 const TopLevelMenu = () => {
     return (
-        <div className="border-b border-black flex">
+
+        <nav className="bg-gray-800 border-b border-black flex text-white">
             <TopLevelMenuButton title="Home" link="/" />
             <TopLevelMenuButton title="Timeline" link="/timeline" />
-        </div>
+        </nav>
+
     );
 };
 
