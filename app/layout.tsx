@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-import TopLevelMenu from "./components/top-level-menu";
+import TopLevelMenu from "./components/top-level-menu/TopLevelMenu";
 
 const inter = Inter({ subsets: ["latin"] });
 
