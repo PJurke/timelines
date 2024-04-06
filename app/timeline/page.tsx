@@ -7,12 +7,14 @@ export const metadata: Metadata = {
 
 export default function Page() {
     return (
+      
+        <div className="p-4">
+          <h1 className="text-4xl">Timeline</h1>
 
-      <div className="p-4">
-        <TimelineEvent date="2024" title="3rd Event" />
-        <TimelineEvent date="2023" title="2nd Event" />
-        <TimelineEvent date="2022" title="1st Event" />
-      </div>
+          <TimelineEvent date="2024" title="3rd Event" />
+          <TimelineEvent date="2023" title="2nd Event" />
+          <TimelineEvent date="2022" title="1st Event" />
+        </div>
 
     );
   }
