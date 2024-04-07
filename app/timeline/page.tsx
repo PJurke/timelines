@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import TimelineEvent from "../components/timeline/event/TimelineEvent";
 import listTimelines from "../lib/api/get-timeline";
 import { PageProps } from "@/.next/types/app/layout";
+import NoTimelineFound from "../components/timeline/event/NoTimelineFound";
 
 export const metadata: Metadata = {
   title: "Timeline"
@@ -11,7 +12,9 @@ export default async function Page(props: PageProps) {
   
   if (props.searchParams?.id === undefined) {
     console.log('nein');
-    return;
+    return (
+      <NoTimelineFound />
+    )
   }
 
   //const timeline = await listTimelines('6611af95ecf8c97fc6d9ce41');
