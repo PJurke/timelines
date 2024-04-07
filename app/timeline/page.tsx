@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import TimelineEvent from "../components/timeline/event";
+import TimelineEvent from "../components/timeline/event/TimelineEvent";
 import listTimelines from "../lib/api/get-timeline";
 import { PageProps } from "@/.next/types/app/layout";
 
