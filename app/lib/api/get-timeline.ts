@@ -4,6 +4,10 @@ import { Timeline } from '../definitions';
 
 export default async (id: string): Promise<Timeline | null> => {
 
+    if (ObjectId.isValid(id) == false) {
+        return null;
+    }
+
     try {
 
         const client = await clientPromise;

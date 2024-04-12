@@ -1,4 +1,5 @@
 export type Timeline = {
+    _id: string
     name: string
     events: [Event]
 };
