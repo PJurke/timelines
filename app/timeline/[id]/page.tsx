@@ -3,6 +3,7 @@ import TimelineEvent from "../../components/timeline/event/TimelineEvent";
 import getTimeline from "../../lib/api/get-timeline";
 import NoTimelineFound from "../../components/timeline/event/NoTimelineFound";
 import { PageProps } from "@/.next/types/app/page";
+import { ObjectId } from "mongodb";
 
 export const metadata: Metadata = {
   title: "Timeline"
@@ -10,14 +11,18 @@ export const metadata: Metadata = {
 
 export default async function Page(props: PageProps) {
   
-  const timelineId = props.params.id;
+  // Get timeline id from url
+  const { id } = props.params;
 
-  if (props.params.id === undefined) {
+  // If the id is not defined or not valid, then return NoTimelineFound
+  if (!id || !ObjectId.isValid(id)) {
     return <NoTimelineFound />;
   }
 
-  const timeline = await getTimeline(props.params.id);
+  // Query timeline from database
+  const timeline = await getTimeline(new ObjectId(props.params.id as string));
 
+  // If there is no timeline, then retrieve NoTimelineFound
   if (timeline === null) {
     return <NoTimelineFound />;
   }

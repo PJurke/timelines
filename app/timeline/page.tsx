@@ -17,7 +17,7 @@ export default async function Page() {
 
         <div className="mt-5">
           {timelines?.map((timeline) => 
-            <TimelineListItem key={timeline._id} id={timeline._id} name={timeline.name} />
+            <TimelineListItem key={timeline._id.toString()} id={timeline._id} name={timeline.name} />
           )}
         </div>
       </div>

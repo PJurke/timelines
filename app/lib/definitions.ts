@@ -1,5 +1,7 @@
+import { ObjectId } from "mongodb";
+
 export type Timeline = {
-    _id: string
+    _id: ObjectId
     name: string
     events: [Event]
 };
