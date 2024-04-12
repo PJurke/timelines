@@ -28,7 +28,7 @@ export default async function Page(props: PageProps) {
         <h1 className="text-4xl">{timeline?.name}</h1>
 
         {timeline?.events?.map((event) => (
-          <TimelineEvent date={event.date} title={event.title} />
+          <TimelineEvent key={event.date + event.title} date={event.date} title={event.title} />
         ))}
       </div>
 
