@@ -16,7 +16,7 @@ const NoTimelineFound = () => {
                     Timeline not found
                 </div>
                 <div className="text-gray-500 text-sm">
-                    We haven't found the searched timeline.
+                    We haven&#39;t found the searched timeline.
                 </div>
             </div>
         </div>

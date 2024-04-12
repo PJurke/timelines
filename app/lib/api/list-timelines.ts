@@ -1,7 +1,7 @@
 import clientPromise from '../mongo/mongodb';
 import { Timeline } from '../definitions';
 
-export default async (): Promise<Timeline[]> => {
+export default async function listTimelines(): Promise<Timeline[]> {
 
     try {
 

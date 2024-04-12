@@ -2,7 +2,7 @@ import { ObjectId } from 'mongodb';
 import clientPromise from '../mongo/mongodb';
 import { Timeline } from '../definitions';
 
-export default async (id: string): Promise<Timeline | null> => {
+export default async function getTimeline(id: string): Promise<Timeline | null> {
 
     if (ObjectId.isValid(id) == false) {
         return null;
@@ -16,7 +16,7 @@ export default async (id: string): Promise<Timeline | null> => {
         const timeline = await db
             .collection<Timeline>('timelines')
             .findOne({
-                '_id': new ObjectId(id)
+                '_id': id
             });
             
         return timeline;
