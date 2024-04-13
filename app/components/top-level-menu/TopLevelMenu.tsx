@@ -19,7 +19,7 @@ const TopLevelMenu = () => {
             <HamburgerMenu toggleVisibility={toggleVisibility} />
             <TopLevelMenuList isOpen={isOpen}>
                 <TopLevelMenuButton title="Home" link="/" />
-                <TopLevelMenuButton title="Timeline" link="/timeline" />
+                <TopLevelMenuButton title="Timelines" link="/timeline" />
             </TopLevelMenuList>
         </nav>
 
