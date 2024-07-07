@@ -12,7 +12,7 @@ export default async function Page() {
   
   return (
     
-      <div className="p-4">
+      <div className="md:container md:mx-auto p-4">
         <h1 className="text-4xl">All Timelines</h1>
 
         <div className="mt-5">

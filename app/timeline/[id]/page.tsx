@@ -28,7 +28,7 @@ export default async function Page(props: PageProps) {
   }
   
   return (
-      <div className="p-4">
+      <div className="md:container md:mx-auto p-4">
         <h1 className="text-4xl">{timeline?.name}</h1>
         <Timeline events={timeline.events} />
       </div>
