@@ -1,17 +1,15 @@
+import { TimelineEventProps } from "./TimelineEventProps";
+
 const TimelineEvent = (props: TimelineEventProps) => {
     return (
 
-        <div className="mt-5">
-            <div className="text-gray-500 text-sm">{props.date}</div>
-            <div className="text-2xl">{props.title}</div>
+        <div className="grid gap-1 text-sm relative">
+            <div className="aspect-square w-3 bg-slate-400 rounded-full absolute left-0 translate-x-[-29.5px] z-10 top-1" />
+            <div className="font-medium">{props.date}</div>
+            <div>{props.title}</div>
         </div>
         
     );
 };
-
-interface TimelineEventProps {
-    date: string;
-    title: string;
-}
 
 export default TimelineEvent;

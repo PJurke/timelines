@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import listTimelines from "../lib/api/list-timelines";
-import TimelineListItem from "../components/timeline/TimelineListItem";
+import TimelineListItem from "../components/timeline-list/TimelineListItem";
 
 export const metadata: Metadata = {
   title: "Timeline Overview"
