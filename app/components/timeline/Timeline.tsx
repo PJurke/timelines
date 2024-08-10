@@ -1,15 +1,15 @@
-import TimelineEvent from "./event/TimelineEvent";
+import TimelineEventItem from "./event/TimelineEventItem";
 import { TimelineEventProps } from "./event/TimelineEventProps";
 
 const Timeline = (props: TimelineInterface) => {
     return (
 
-        <div className="p-6 sm:p-10">
-            <div className="after:absolute after:inset-y-0 after:w-px after:bg-slate-400 relative pl-6 after:left-0 grid gap-10">
-                {props?.events?.map((item, index) => (
-                    <TimelineEvent date={item.date} title={item.title} key={index} />
-                ))}
-            </div>
+        <div className="mt-10 relative space-y-8">
+            <div className="absolute bg-black hidden h-full left-3 top-0 w-px -z-10 md:block"></div>
+            
+            {props?.events?.map((item) => (
+                <TimelineEventItem key={item.date} date={item.date} title={item.title} />
+            ))}
         </div>
 
     )
