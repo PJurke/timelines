@@ -8,7 +8,7 @@ const Timeline = (props: TimelineInterface) => {
             <div className="absolute bg-black hidden h-full left-3 top-0 w-px -z-10 md:block"></div>
             
             {props?.events?.map((item) => (
-                <TimelineEventItem key={item.date} date={item.date} title={item.title} />
+                <TimelineEventItem key={item.date + item.title} date={item.date} title={item.title} />
             ))}
         </div>
 

@@ -7,6 +7,12 @@ export type Timeline = {
 };
 
 export type Event = {
-    date: string;
+    date: TimelineDate;
     title: string;
 };
+
+export type TimelineDate = {
+    day?: number;
+    month?: number;
+    year?: number;
+}

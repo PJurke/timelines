@@ -1,4 +1,6 @@
+import { TimelineDate } from "../TimelineDate";
+
 export interface TimelineEventProps {
-    date: string;
+    date: TimelineDate;
     title: string;
 }
