@@ -5,7 +5,7 @@ const TimelineEventDetails = (props: TimelineEventProps) => {
     return (
 
         <div>
-            <div className="text-gray-500 text-xs">{formatTimelineDate(props.date)}</div>
+            <time className="text-gray-500 text-xs">{formatTimelineDate(props.date)}</time>
             <div className="text-xl">{props.title}</div>
         </div>
         
