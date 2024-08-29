@@ -4,20 +4,25 @@ export type TimelineDate = {
     year?: number;
 }
 
-export function formatTimelineDate(date: TimelineDate): string {
-    if (date.year !== undefined && date.month !== undefined && date.day !== undefined) {
-        // All three values defined: format as "Day.Month.Year"
-        return `${date.day.toString().padStart(2, '0')}.${date.month.toString().padStart(2, '0')}.${date.year}`;
-    } else if (date.year !== undefined && date.month !== undefined) {
-        // Year and month defined: format as "Month.Year"
-        return `${date.month.toString().padStart(2, '0')}.${date.year}`;
-    } else if (date.year !== undefined) {
-        // Only year defined: format as "Year"
-        return `${date.year}`;
-    } else {
-        // Year not defined: return an error message indicating invalid date
-        return 'Invalid';
+export function formatTimelineDate(date: TimelineDate): string | null {
+
+    // At least the year must be given (dd.mm.yyyy or mm.yyyy or yyyy are allowed)
+    if (!date.year) {
+        return null;
     }
+
+    // Helper function to add leading zeros
+    const pad = (num: number | undefined) => num?.toString().padStart(2, '0');
+
+    // Take parts which exist and pad them if necessary
+    const parts = [
+        date.day !== undefined ? pad(date.day) : undefined,
+        date.month !== undefined ? pad(date.month) : undefined,
+        date.year.toString()
+    ];
+
+    // Join parts and add the separator
+    return parts.filter(Boolean).join('.');
 }
 
 export function getDateValue(date: TimelineDate): number {
