@@ -4,9 +4,9 @@ import Link from "next/link";
 const TimelineListItem = (props: TimelineListItemProps) => {
     return (
 
-        <div className="p-4 hover:bg-blue-100">
-            <Link href={`/timeline/${props.id.toString()}`}>{props.name}</Link>
-        </div>
+        <li className="p-4 hover:bg-slate-100">
+            <Link className="text-slate-800 " href={`/timeline/${props.id.toString()}`}>{props.name}</Link>
+        </li>
         
     );
 };

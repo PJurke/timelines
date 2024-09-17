@@ -15,11 +15,11 @@ export default async function Page() {
       <div className="md:container md:mx-auto p-4">
         <h1 className="text-4xl">All Timelines</h1>
 
-        <div className="mt-5">
+        <ul className="divide-y divide-gray-200 mt-5">
           {timelines?.map((timeline) => 
             <TimelineListItem key={timeline._id.toString()} id={timeline._id} name={timeline.name} />
           )}
-        </div>
+        </ul>
       </div>
 
   );
