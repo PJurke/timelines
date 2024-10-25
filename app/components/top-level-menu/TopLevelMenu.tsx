@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import HamburgerMenu from "./HamburgerMenu";
-import TopLevelMenuButton from './TopLevelMenuButton';
+import TopLevelMenuLink from './TopLevelMenuLink';
 import TopLevelMenuList from './TopLevelMenuList';
 
 const TopLevelMenu = () => {
@@ -42,8 +42,8 @@ const TopLevelMenu = () => {
         <nav className="bg-gray-800 border-b border-black flex flex-col md:flex-row text-white" ref={menuRef}>
             <HamburgerMenu toggleVisibility={toggleVisibility} isOpen={isOpen} />
             <TopLevelMenuList isOpen={isOpen}>
-                <TopLevelMenuButton title="Home" link="/" onClick={closeMenu} />
-                <TopLevelMenuButton title="Timelines" link="/timeline" onClick={closeMenu} />
+                <TopLevelMenuLink title="Home" href="/" onClick={closeMenu} />
+                <TopLevelMenuLink title="Timelines" href="/timeline" onClick={closeMenu} />
             </TopLevelMenuList>
         </nav>
 

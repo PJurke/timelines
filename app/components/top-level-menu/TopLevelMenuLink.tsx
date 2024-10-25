@@ -3,7 +3,7 @@ import Link from 'next/link'
 /* INTERFACE */
 
 interface ButtonProps {
-    link: string;
+    href: string;
     title: string;
     onClick?: () => void;
 }
@@ -13,12 +13,12 @@ interface ButtonProps {
     This component provides a default button for the top level menu.
 */
 
-const TopLevelMenuButton = ({ title, link, onClick }: ButtonProps) => {
+const TopLevelMenuLink = ({ title, href, onClick }: ButtonProps) => {
     return (
 
-        <Link className="block p-4" href={link} onClick={onClick}>{title}</Link>
+        <Link className="block p-4" href={href} onClick={onClick}>{title}</Link>
         
     );
 };
 
-export default TopLevelMenuButton;
+export default TopLevelMenuLink;
