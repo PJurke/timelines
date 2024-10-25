@@ -40,7 +40,7 @@ const TopLevelMenu = () => {
     return (
 
         <nav className="bg-gray-800 border-b border-black flex flex-col md:flex-row text-white" ref={menuRef}>
-            <HamburgerMenu toggleVisibility={toggleVisibility} />
+            <HamburgerMenu toggleVisibility={toggleVisibility} isOpen={isOpen} />
             <TopLevelMenuList isOpen={isOpen}>
                 <TopLevelMenuButton title="Home" link="/" onClick={closeMenu} />
                 <TopLevelMenuButton title="Timelines" link="/timeline" onClick={closeMenu} />
