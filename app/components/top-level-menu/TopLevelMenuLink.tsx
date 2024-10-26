@@ -16,7 +16,7 @@ interface ButtonProps {
 const TopLevelMenuLink = ({ title, href, onClick }: ButtonProps) => {
     return (
 
-        <Link className="block p-4" href={href} onClick={onClick}>{title}</Link>
+        <Link className="block p-4 hover:bg-white/10" href={href} onClick={onClick}>{title}</Link>
         
     );
 };
